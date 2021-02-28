@@ -10,19 +10,19 @@ const Table = ({ users }) => {
       <table className="table">
         <thead>
           <tr>
-            <th scope="col">title</th>
+            <th scope="col">Picture</th>
             <th
               scope="col"
               onClick={() => {
                 const usersCopy = [...users];
-                const updateSort = usersCopy.sort((a, b) => {
-                  const nameA = a.name.first;
-                  const nameB = b.name.first;
+                const updateSort = usersCopy.sort((nameOne, nameTwo) => {
+                  const name1 = nameOne.name.first;
+                  const name2 = nameTwo.name.first;
 
-                  if (nameA < nameB) {
+                  if (name1 < name2) {
                     return -1;
                   }
-                  if (nameA > nameB) {
+                  if (name1 > name2) {
                     return 1;
                   }
 
@@ -32,10 +32,11 @@ const Table = ({ users }) => {
                 updateSortedUsers(updateSort);
               }}
             >
-              First
+              title
             </th>
-            <th scope="col">Last</th>
-            <th scope="col">gender</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Gender</th>
             <th scope="col">email</th>
             <th scope="col">phone</th>
             <th scope="col">cell</th>
@@ -43,7 +44,7 @@ const Table = ({ users }) => {
             <th scope="col">state</th>
             <th scope="col">country</th>
             <th scope="col">postcode</th>
-            <th scope="col">picture</th>
+            
           </tr>
         </thead>
         <tbody>
@@ -58,6 +59,9 @@ const Table = ({ users }) => {
               name: { first, last, title }
             }) => (
               <tr key={email}>
+                <td>
+                  <img src={thumbnail} />
+                </td>
                 <td>{title}</td>
                 <th>{first}</th>
                 <td>{last}</td>
@@ -69,9 +73,6 @@ const Table = ({ users }) => {
                 <td>{state}</td>
                 <td>{country}</td>
                 <td>{postcode}</td>
-                <td>
-                  <img src={thumbnail} />
-                </td>
 
                 <td></td>
               </tr>

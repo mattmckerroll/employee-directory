@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import FilterInput from "./FilterInput";
-import Table from "./Table";
+import FilterInput from "./filterinput";
+import Table from "./table";
 import { getUsersinfo } from "./API";
 import "./App.css";
 
