@@ -37,13 +37,13 @@ const Table = ({ users }) => {
             <th scope="col">First Name</th>
             <th scope="col">Last Name</th>
             <th scope="col">Gender</th>
-            <th scope="col">email</th>
-            <th scope="col">phone</th>
-            <th scope="col">cell</th>
-            <th scope="col">city</th>
-            <th scope="col">state</th>
-            <th scope="col">country</th>
-            <th scope="col">postcode</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone #</th>
+            <th scope="col">Cell #</th>
+            <th scope="col">City</th>
+            <th scope="col">State</th>
+            <th scope="col">Country</th>
+            <th scope="col">Zip Code</th>
             
           </tr>
         </thead>
